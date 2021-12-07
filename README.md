@@ -26,6 +26,7 @@ COLABORADORES :
     <td align="center"><a href="https://github.com/JessicaTeodoroM"><img src="https://avatars.githubusercontent.com/u/91223969?v=4" width="100px;" alt=""/><br /><sub><b>Jessica Teodoro</b></sub></td>
     <td align="center"><a href="https://github.com/thalesgfelix"><img src="https://avatars.githubusercontent.com/u/90735076?v=4" width="100px;" alt=""/><br /><sub><b>Thales Gabriel</b></sub></td>
     <td align="center"><a href="https://github.com/SamuelLSales"><img src="https://avatars.githubusercontent.com/u/90739934?v=4" width="100px;" alt=""/><br /><sub><b>Samuel Lima</b></sub></td>
+    <td align="center"><a href="https://github.com/cassianogremioibv"><img src="https://avatars.githubusercontent.com/u/90739934?v=4" width="100px;" alt=""/><br /><sub><b>Cassiano</b></sub></td>  
 <table
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
