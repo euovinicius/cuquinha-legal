@@ -1,6 +1,5 @@
 
 
-Objetivo do Sistema
 
 
 
