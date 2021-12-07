@@ -1,5 +1,7 @@
-
 Objetivo do Sistema
+
+O objetivo do projeto e o desenvolvimento de um jogo de perguntas e respostas, dois jogadores terao 5 personagens diponiveis, aonde cada 1 pode escolher somente 1 persoangem para batalhar,logo apos a escolha começa o game, a cada resposta errada o jogador perdera vida, o jogador que tiver vida zerado primeiro perdera o game.
+
 
 
 
