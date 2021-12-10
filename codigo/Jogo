@@ -1,0 +1,198 @@
+package Trabalhof;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Jogo {
+
+    private Jogador player1;
+    private Jogador player2;
+    private ArrayList<Pergunta> perguntas = new ArrayList();
+
+    public Jogo(Jogador player1, Jogador player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+
+        //pergunta1
+        Pergunta pergunta1 = new Pergunta ("Em programação orientada a objetos, métodos de acesso do tipo "
+                + "setter têm a finalidade primária de?");
+        pergunta1.adicionaAlternativas("\n Modificar o valor de um atributo.", true);
+        pergunta1.adicionaAlternativas(" Obter o valor de um atributo.", false);
+        pergunta1.adicionaAlternativas(" Contar quantas vezes o valor de um atributo foi obtido.", false);
+        pergunta1.adicionaAlternativas(" Inicializar os valores de atributos de um objeto assim que ele é instanciado.\n", false);
+        this.perguntas.add(pergunta1);
+
+        //pergunta2
+        Pergunta pergunta2 = new Pergunta("Na programação orientada a objetos (POO), uma ação executada por um objeto quando "
+                + "passada uma mensagem ou em resposta a uma mudança de estado representa o conceito de?");
+        pergunta2.adicionaAlternativas("\n Mutante.", false);
+        pergunta2.adicionaAlternativas(" Construtor.", false);
+        pergunta2.adicionaAlternativas(" Comportamento.", true);
+        pergunta2.adicionaAlternativas(" Domínio.\n", false);
+        this.perguntas.add(pergunta2);
+
+        //pergunta3
+        Pergunta pergunta3 = new Pergunta("e um principio da OO?:");
+        pergunta3.adicionaAlternativas("\nClasse.", false);
+        pergunta3.adicionaAlternativas(" Subclasse.", true);
+        pergunta3.adicionaAlternativas(" Classe main.", false);
+        pergunta3.adicionaAlternativas(" Classe abstrata.\n", false);
+
+        this.perguntas.add(pergunta3);
+
+        //pergunta4
+        Pergunta pergunta4 = new Pergunta("Os quatro pilares do paradigma de Orientação a Objetos são:");
+        pergunta4.adicionaAlternativas("\nClasses, Atributos, Métodos e Abstração.", true);
+        pergunta4.adicionaAlternativas(" Herança, Polimorfismo, Classes e Objetos.", false);
+        pergunta4.adicionaAlternativas(" Abstração,Encapsulamento, Herança e Polimorfismo.", false);
+        pergunta4.adicionaAlternativas(" Sequenciamento, Procedimentos, Bibliotecas e Herança.\n", false);
+
+        //pergunta5
+        Pergunta pergunta5 = new Pergunta("Considere a seguinte afirmação sobre a Análise de Sistemas orientada a objetos.\n"
+                + "\n"
+                + "\"Superclasse é a generalização de um conjunto de classes a ela relacionadas.\"");
+        pergunta5.adicionaAlternativas("Verdadeiro", false);
+        pergunta5.adicionaAlternativas("Falso", false);
+
+        //pergunta6
+        Pergunta pergunta6 = new Pergunta("Assinale a alternativa correta de polimorfismo de acordo com a seguinte afirmação:\n"
+                + "¨se restringe ao uso de templates (C++, por exemplo) e generics (C#/Java).¨");
+        pergunta6.adicionaAlternativas("\nInclusão.", false);
+        pergunta6.adicionaAlternativas(" Sobrecarga.", false);
+        pergunta6.adicionaAlternativas(" Paramétrico.", true);
+        pergunta6.adicionaAlternativas(" Coerção.\n", false);
+
+        //pergunta7
+        Pergunta pergunta7 = new Pergunta(" Assinale a alternativa correta de acordo com a frase a seguir:\n"
+                + "¨Relacionamento com características todo-parte, onde existe um grau de acoplamento entre o todo e as partes menos intenso, podendo haver certo grau de independência entre eles.¨");
+        pergunta7.adicionaAlternativas("Agregação", true);
+        pergunta7.adicionaAlternativas("Composição", false);
+
+        //pergunta8
+        Pergunta pergunta8 = new Pergunta("São principios da OO, exceto");
+        pergunta8.adicionaAlternativas("\nClasse.", true);
+        pergunta8.adicionaAlternativas(" Abstração.", false);
+        pergunta8.adicionaAlternativas(" Polimorfismo.", false);
+        pergunta8.adicionaAlternativas(" Herança.\n", false);
+        //pergunta9
+        Pergunta pergunta9 = new Pergunta("Qual método promove a inicialização do objeto, de forma "
+                + "que, o objetivo após essa inicialização, já se encontra logicamente consistente?");
+        pergunta9.adicionaAlternativas("\nConstrutor.", true);
+        pergunta9.adicionaAlternativas(" Destrutor.", false);
+        pergunta9.adicionaAlternativas(" Atributos.", false);
+        pergunta9.adicionaAlternativas(" Público.\n", false);
+
+        //pergunta10
+        Pergunta pergunta10 = new Pergunta("O conceito de Programação Orientada a Objetos que permite construir "
+                + "objetos especializados utilizando características de objetos mais generalistas, possibilitando reuso de código à medida que os atributos e métodos de classes já existentes podem gerar novas classes mais específicas, é o de");
+        pergunta10.adicionaAlternativas("\nAssociação.", false);
+        pergunta10.adicionaAlternativas(" Abstração.", false);
+        pergunta10.adicionaAlternativas(" Polimorfismo.", false);
+        pergunta10.adicionaAlternativas(" Herança.\n", true);
+
+        //pergunta11
+        Pergunta pergunta11 = new Pergunta("Na linguagem de programação Java, o conceito de um objeto "
+                + "ter a capacidade de ser referenciado de diversas formas é conhecido como?");
+        pergunta11.adicionaAlternativas("\n Reescrita", false);
+        pergunta11.adicionaAlternativas(" Classe Principal", false);
+        pergunta11.adicionaAlternativas(" Polimorfismo", true);
+        pergunta11.adicionaAlternativas(" Reescrita.\n", false);
+        
+        //pergunta12
+        Pergunta pergunta12 = new Pergunta("Qual é a finalidade de adicionar comentários ao código?");
+        pergunta12.adicionaAlternativas("\n Fornecer uma melhor segurança ao programa.", false);
+        pergunta12.adicionaAlternativas(" Aumentar o tempo de execução do código.", false);
+        pergunta12.adicionaAlternativas(" Fornecer uma boa aparência do código.", false);
+        pergunta12.adicionaAlternativas(" Fornecer uma melhor segurança ao programa.\n", true);
+
+    }
+
+    void jogar(Scanner leia) {
+      
+        System.out.println("-----------------------");
+        System.out.println("   INICIO DO JOGO   ");
+        System.out.println("-----------------------");
+
+        Jogador jogador1 = sortearJogador();
+        Jogador jogador2 = jogador1 == player1 ? player2 : player1;
+
+        for (Pergunta pergunta : perguntas) {
+            System.out.println("-----------------------");
+            System.out.println("      PERGUNTA     ");
+            System.out.println(jogador1.getNome()
+                    + " - jogando "
+                    + "(" + jogador1.getPontos() + "), "  + jogador2.getNome()  + " - na espera (" + jogador2.getPontos()+ ")");
+            System.out.println("-----------------------");
+
+            boolean acertou = pergunta.perguntar(leia);
+            if (acertou) {
+                System.out.println("Voce acertou, proxima pergunta.");
+                continue;
+            } else {
+                jogador1.atualizaPontos(-10);
+                System.out.println("que pena Jogador 1 errou -10 vida.");
+            }
+
+            System.out.println("-----------------------");
+            System.out.println("      PERGUNTA     ");
+            System.out.println(jogador1.getNome()
+                    + " -  Na espera "
+                    + "("
+                    + jogador1.getPontos()
+                    + "), " 
+                    + jogador2.getApelido()
+                    + " - Jogando ("
+                    + jogador2.getPontos()
+                    + ")");
+            System.out.println("-----------------------");
+
+            acertou = pergunta.perguntar(leia);
+            if (acertou) {
+                System.out.println("Voce acertou, proxima pergunta.");
+                continue;
+            } else {
+                jogador2.atualizaPontos(-10);
+                System.out.println("que pena Jogador 2 errou -10 vida.");
+            }
+
+            if (jogador1.getPontos() == 0) {
+                System.out.println("Voce perdeu!");
+                break;
+            }
+            if (jogador2.getPontos() == 0) {
+                System.out.println("Voce perdeu!");
+                break;
+            }
+        }
+
+    }
+
+    private Jogador sortearJogador() {
+        System.out.println("-----------------------");
+        System.out.println("   SORTEAR JOGADOR   ");
+        System.out.println("-----------------------");
+        while (true) {
+            int numero1 = sorteioDado();
+            int numero2 = sorteioDado();
+            System.out.println("Player 1:" + numero1 + ", Player 2: " + numero2);
+            if (numero1 > numero2) {
+                System.out.println("Player " + player1.getPersonagem() + " inicia");
+                return player1;
+            } else if (numero2 > numero1) {
+                System.out.println("Player " + player2.getPersonagem() + " inicia");
+                return player2;
+            } else {
+                System.out.println("Igual");
+            }
+
+        }
+    }
+
+    private int sorteioDado() {
+        return 1 + (int) (Math.random() *6);
+    }
+
+     
+
+}
+
